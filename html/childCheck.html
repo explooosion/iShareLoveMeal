@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tw-zh">
+
+<head>
+    <title>iShareLoveMeal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' />
+    <link rel="styleSheet" type="text/css" href="./custom.css">
+    <link rel="styleSheet" type="text/css" href="./style.css">
+    <script>
+        function checkPass() {
+            var p = document.getElementById('txtPwd').value;
+            if (p == '1234') {
+                location.href = "./childDetail.html";
+            } else {
+                alert('輸入錯誤，請重新確認！');
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="header">
+            <h2 class="welcome">Hi, 鳳城燒臘店！</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <img src="./img/logo1.png" alt="">
+                <img src="./img/logo2.png" alt="">
+            </div>
+            <div class="row">
+                <h2 class="title">請輸入用餐代碼(學童)</h2>
+            </div>
+            <div class="row">
+                <input id="txtPwd" type="password" class="text text-lg" placeholder="例如:1234">
+            </div>
+            <div class="row">
+                <button type="button" class="btn" onclick="checkPass();">確定</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

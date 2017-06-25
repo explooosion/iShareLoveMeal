@@ -1,0 +1,70 @@
+* {
+    font-family: Georgia, 'Microsoft JhengHei', Times, serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 12px;
+    font-family: Georgia, 'Microsoft JhengHei', Times, serif;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+
+/* global */
+
+.wrapper {
+    margin: 0px auto;
+    width: 768px;
+    height: 100vh;
+    background: #ddd;
+}
+
+.header {
+    height: 80px;
+    background: #ccc;
+}
+
+.header .welcome {
+    margin: 20px;
+    float: right;
+    color: #DC133B;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.container {
+    display: block;
+    padding: 80px;
+    text-align: center;
+}
+
+.container .title {
+    font-weight: bold;
+    color: #222;
+}
+
+.container input,
+.container button {
+    width: 80%;
+}
+
+
+/* detailChild */
+
+.detail {
+    width: 60%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.detail td {
+    text-align: right;
+}
