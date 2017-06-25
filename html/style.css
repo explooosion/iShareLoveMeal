@@ -1,11 +1,11 @@
 * {
-    font-family: Georgia, 'Microsoft JhengHei', Times, serif;
+    font-family: 'Microsoft JhengHei', serif;
 }
 
 body {
     overflow-x: hidden;
     font-size: 12px;
-    font-family: Georgia, 'Microsoft JhengHei', Times, serif;
+    font-family: 'Microsoft JhengHei', serif;
 }
 
 h2 {
@@ -56,15 +56,23 @@ h3 {
 }
 
 
-/* detailChild */
+/* childDetail */
 
-.detail {
+.container .detail {
     width: 60%;
     margin: 0 auto;
-    font-weight: bold;
     font-size: 20px;
+    font-weight: bold;
 }
 
-.detail td {
+.container .detail td {
     text-align: right;
+}
+
+
+/* childDetailFaild */
+
+.container .message {
+    font-size: 40px;
+    font-weight: bold;
 }
