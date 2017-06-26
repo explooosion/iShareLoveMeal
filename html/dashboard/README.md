@@ -1,27 +1,35 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [SB Admin](http://startbootstrap.com/template-overviews/sb-admin/)
-
-[SB Admin](http://startbootstrap.com/template-overviews/sb-admin/) is an open source, admin dashboard template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
-
-## Getting Started
-
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/sb-admin/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-sb-admin.git`
-* Fork the repo
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-sb-admin/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/sb-admin/).
-
-## Creator
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/gh-pages/LICENSE) license.
+# iShare 功能(後台)
+  
+## 登入
++ 註冊			
++ 忘記密碼			
+				
+## 首頁
++ 歡迎訊息			
+				
+## 學童管理
++ 學童列表			
++ 學童新增			
++ 學童編輯			
++ 學童刪除			
+				
+## 店家管理
++ 店家列表			
++ 店家新增			
++ 店家編輯			
++ 店家刪除			
+				
+## 兌換紀錄管理
++ 兌換記錄查詢			
++ 兌換紀錄列表 (顯示自己店家)		
+				
+## 點數管理
++ 點數補充紀錄查詢			
++ 點數補充作業 - 選擇學童		
+				
+## 系統參數管理	
++ 系統管理員 - 修改密碼		
++ 時段管理 (中午時段、晚上時段)	
+				
+## 系統日誌管理
++ 登入紀錄列表			
