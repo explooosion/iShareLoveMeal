@@ -94,7 +94,7 @@ var myLineChart = new Chart(ctx, {
             label: "Revenue",
             backgroundColor: "rgba(2,117,216,1)",
             borderColor: "rgba(2,117,216,1)",
-            data: [5412, 5312, 5846, 6125, 5971, 6025],
+            data: [412, 312, 846, 625, 971, 525],
         }],
     },
     options: {
@@ -113,7 +113,7 @@ var myLineChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     min: 0,
-                    max: 8000,
+                    max: 1000,
                     maxTicksLimit: 5
                 },
                 gridLines: {

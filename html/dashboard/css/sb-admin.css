@@ -177,3 +177,6 @@ body.fixed-nav {
         text-align: center; }
     #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown .dropdown-menu > .dropdown-item > .dropdown-message {
       max-width: 300px; } }
+
+#student .card .card-header {
+  line-height: 40px; }
