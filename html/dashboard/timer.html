@@ -48,16 +48,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./point.html"><i class="fa fa-fw fa-credit-card"></i> 點數管理</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="./record.html"><i class="fa fa-fw fa-list"></i> 兌換紀錄</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"><i class="fa fa-fw fa-cog"></i> 系統參數</a>
-                    <ul class="sidebar-second-level collapse" id="collapseMulti">
+                    <a class="nav-link nav-link-collapse" data-toggle="collapse" href="#collapseMulti"><i class="fa fa-fw fa-cog"></i> 系統參數</a>
+                    <ul class="sidebar-second-level collapse show" id="collapseMulti">
                         <li>
                             <a href="./account.html">系統帳號管理</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="./timer.html">時段管理</a>
                         </li>
                     </ul>
@@ -130,62 +130,8 @@
             <!-- Breadcrumbs -->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html">首頁</a></li>
-                <li class="breadcrumb-item active">兌換紀錄</li>
+                <li class="breadcrumb-item active">時段管理</li>
             </ol>
-
-            <!-- Example Tables Card -->
-            <div class="card mb-3">
-                <div class="card-header">
-                    <i class="fa fa-list"></i> 兌換紀錄
-                </div>
-                <div class="card-block">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>店名</th>
-                                    <th>分店</th>
-                                    <th>兌換學童</th>
-                                    <th>兌換日期</th>
-                                    <th>兌換時間</th>
-                                    <th>兌換類型</th>
-                                </tr>
-                            </thead>
-                            <!--<tfoot>
-                                <tr>
-                                    <th>店名</th>
-                                    <th>分店</th>
-                                    <th>兌換學童</th>
-                                    <th>兌換日期</th>
-                                    <th>兌換時間</th>
-                                    <th>兌換類型</th>
-                                </tr>
-                            </tfoot>-->
-                            <tbody>
-                                <tr>
-                                    <td>台灣雞腿王</td>
-                                    <td>黎明店</td>
-                                    <td>劉曉萱</td>
-                                    <td>2017-06-29</td>
-                                    <td>12:24</td>
-                                    <td>中餐</td>
-                                </tr>
-                                <tr>
-                                    <td>台灣雞腿王</td>
-                                    <td>黎明店</td>
-                                    <td>劉曉萱</td>
-                                    <td>2017-07-02</td>
-                                    <td>18:13</td>
-                                    <td>晚餐</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="card-footer small text-muted">
-                    最後更新 6/29 早上 08:30
-                </div>
-            </div>
 
         </div>
         <!-- /.container-fluid -->
@@ -199,6 +145,7 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="vendor/tether/tether.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
