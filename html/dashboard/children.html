@@ -55,7 +55,7 @@
                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"><i class="fa fa-fw fa-cog"></i> 系統參數</a>
                     <ul class="sidebar-second-level collapse" id="collapseMulti">
                         <li>
-                            <a href="#">系統帳號管理</a>
+                            <a href="./account.html">系統帳號管理</a>
                         </li>
                         <li>
                             <a href="#">時段管理</a>
@@ -136,7 +136,7 @@
             <!-- Example Tables Card -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <i class="fa fa-table"></i> 學童列表
+                    <i class="fa fa-users"></i> 學童列表
                     <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">新增</button>
                 </div>
                 <div class="card-block">
@@ -230,26 +230,30 @@
                         <div class="form-group">
                             <label class="control-label">性別:</label>
                             <div class="form-check">
-                                <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsSex" id="optionsSex1" value="option1" checked>
-                                男生
-                                </label>
-                                <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsSex" id="optionsSex2" value="option2">
-                                女生
-                                </label>
+                            <label class="custom-control custom-radio">
+                            <input id="sex1" name="sex" type="radio" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">男生</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                            <input id="sex2" name="sex" type="radio" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">女生</span>
+                            </label>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label">葷素:</label>
                             <div class="form-check">
-                                <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsMeal" id="optionsMeal1" value="option1" checked>
-                                葷食
+                                <label class="custom-control custom-radio">
+                                <input id="meal1" name="meal" type="radio" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">葷食</span>
                                 </label>
-                                <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsMeal" id="optionsMeal2" value="option2">
-                                素食
+                                <label class="custom-control custom-radio">
+                                <input id="meal2" name="meal" type="radio" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">素食</span>
                                 </label>
                             </div>
                         </div>

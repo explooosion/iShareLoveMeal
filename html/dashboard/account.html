@@ -45,16 +45,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./store.html"><i class="fa fa-fw fa-university"></i> 店家管理</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="./point.html"><i class="fa fa-fw fa-credit-card"></i> 點數管理</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./record.html"><i class="fa fa-fw fa-list"></i> 兌換紀錄</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"><i class="fa fa-fw fa-cog"></i> 系統參數</a>
-                    <ul class="sidebar-second-level collapse" id="collapseMulti">
-                        <li>
+                    <a class="nav-link nav-link-collapse" data-toggle="collapse" href="#collapseMulti"><i class="fa fa-fw fa-cog"></i> 系統參數</a>
+                    <ul class="sidebar-second-level collapse show" id="collapseMulti">
+                        <li class="active">
                             <a href="./account.html">系統帳號管理</a>
                         </li>
                         <li>
@@ -130,8 +130,63 @@
             <!-- Breadcrumbs -->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html">首頁</a></li>
-                <li class="breadcrumb-item active">點數列表</li>
+                <li class="breadcrumb-item active">系統帳號管理</li>
             </ol>
+
+            <!-- Example Tables Card -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-university"></i> 系統帳號列表
+                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">新增</button>
+                </div>
+                <div class="card-block">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>帳號</th>
+                                    <th>信箱</th>
+                                    <th>權限</th>
+                                    <th>上次登入日期</th>
+                                    <th>上次登入IP</th>
+                                    <th>登入次數</th>
+                                </tr>
+                            </thead>
+                            <!--<tfoot>
+                                <tr>
+                                    <th>帳號</th>
+                                    <th>信箱</th>
+                                    <th>權限</th>
+                                    <th>上次登入日期</th>
+                                    <th>上次登入IP</th>
+                                    <th>登入次數</th>
+                                </tr>
+                            </tfoot>-->
+                            <tbody>
+                                <tr>
+                                    <td>admin</td>
+                                    <td>admin@ishare.tw</td>
+                                    <td>總管理員</td>
+                                    <td>2017-06-29 17:12</td>
+                                    <td>163.17.131.225</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>user</td>
+                                    <td>user@ishare.tw</td>
+                                    <td>管理員</td>
+                                    <td>2017-06-27 14:28</td>
+                                    <td>163.17.131.224</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer small text-muted">
+                    最後更新 6/29 早上 08:30
+                </div>
+            </div>
 
         </div>
         <!-- /.container-fluid -->
@@ -144,7 +199,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">新增店家</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">新增管理員</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
@@ -153,28 +208,29 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label class="control-label">店名:</label>
+                            <label class="control-label">權限:</label>
+                            <select class="custom-select">
+                                <option selected>請選擇</option>
+                                <option value="1">管理員</option>
+                                <option value="2">使用者</option>
+                                <option value="3">進階使用者</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">帳號:</label>
                             <input type="text" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label class="control-label">分店:</label>
-                            <input type="text" class="form-control">
+                            <label class="control-label">密碼:</label>
+                            <input type="password" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label class="control-label">地址:</label>
-                            <input type="text" class="form-control">
+                            <label class="control-label">確認密碼:</label>
+                            <input type="password" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label class="control-label">電話:</label>
-                            <input type="tel" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">服務類型:</label>
-                            <input type="tel" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">備註:</label>
-                            <textarea class="form-control"></textarea>
+                            <label class="control-label">信箱:</label>
+                            <input type="email" class="form-control">
                         </div>
                     </form>
                 </div>
