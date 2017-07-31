@@ -1,0 +1,78 @@
+* {
+    font-family: 'Microsoft JhengHei', serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 12px;
+    font-family: 'Microsoft JhengHei', serif;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+
+/* global */
+
+.wrapper {
+    margin: 0px auto;
+    width: 768px;
+    height: 100vh;
+    background: #ddd;
+}
+
+.header {
+    height: 80px;
+    background: #ccc;
+}
+
+.header .welcome {
+    margin: 20px;
+    float: right;
+    color: #DC133B;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.container {
+    display: block;
+    padding: 80px;
+    text-align: center;
+}
+
+.container .title {
+    font-weight: bold;
+    color: #222;
+}
+
+.container input,
+.container button {
+    width: 80%;
+}
+
+
+/* childDetail */
+
+.container .detail {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .detail td {
+    text-align: right;
+}
+
+
+/* childDetailFaild */
+
+.container .message {
+    font-size: 40px;
+    font-weight: bold;
+}
