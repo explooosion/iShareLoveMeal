@@ -1,4 +1,5 @@
 # node.js
 node_modules/
 npm-debug.log
-doc/layout/~$*.xlsx
+doc/layout/~$*.*
+doc/~$*.*
