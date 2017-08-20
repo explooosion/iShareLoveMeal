@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
     "dev": "./node_modules/.bin/nodemon start.js",
-    "start": "pm2 start start.js",
+    "start": "pm2 start start.js --watch",
     "stop": "pm2 kill"
   },
   "author": "Robby",
@@ -23,11 +23,14 @@
     "koa-bodyparser": "^4.2.0",
     "koa-compose": "^4.0.0",
     "koa-convert": "^1.2.0",
+    "koa-helmet": "^3.2.0",
+    "koa-jwt": "^3.2.2",
     "koa-logger": "^3.0.1",
     "koa-mount": "^3.0.0",
     "koa-router": "^7.2.1",
     "koa-static": "^4.0.1",
     "koa-views": "^6.0.2",
+    "mssql": "^4.0.4",
     "nodemon": "^1.11.0",
     "pm2": "^2.6.1",
     "pug": "^2.0.0-rc.3"

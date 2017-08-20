@@ -18,8 +18,8 @@ export class QrcodeComponent implements OnInit {
 
   public parseQRcode() {
     let url = new URL(location.href);
-    let qr = url["pathname"].split('/')[2];
-
+    let qr = url.searchParams.get('uid');
+    console.log(`uid = ${qr}`);
     if (qr) {
       this.uid = qr;
       this.uname = '陳大目'; // fake

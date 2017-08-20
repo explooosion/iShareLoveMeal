@@ -8,6 +8,7 @@ import serve from 'koa-static';
 import logger from 'koa-logger';
 import convert from 'koa-convert';
 import bodyParser from 'koa-bodyparser';
+import helmet from 'koa-helmet';
 
 // unit
 import middleware from './middleware';
@@ -15,22 +16,19 @@ import routes from './routes';
 
 const app = new Koa();
 
-app.use(logger());
-app.use(bodyParser())
+app
+    .use(logger())
+    .use(bodyParser())
+    .use(helmet())
+    .use(mount("/", convert(serve(__dirname + '/public/'))))
+    .use(views(__dirname + '/view/', {
+        // extension: 'ejs'
+        // extension: 'pug'
+        extension: 'html' // use Angular4
+    }))
+    .use(middleware())
+    .use(routes());
 
-app.use(mount("/", convert(serve(__dirname + '/public/'))));
-
-app.use(views(__dirname + '/view/', {
-    // extension: 'ejs'
-    // extension: 'pug'
-    extension: 'html' // use Angular4
-}));
-
-app.use(middleware())
-
-//app.use(routes.routes(), routes.allowedMethods());
-app.use(routes());
-
-app.listen(3000);
+app.listen(3000, () => console.log(`✅  The server is running at http://localhost:3000/`))
 
 export default app

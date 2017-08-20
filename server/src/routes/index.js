@@ -5,20 +5,17 @@
 import compose from 'koa-compose';
 import Router from 'koa-router';
 
-import api from './api';
+import qrcode from './qrcode';
 import dashboard from './dashboard';
+import api from './api';
 
 const router = new Router();
 
 router.get('/', async(ctx, next) => {
-
-    await ctx.render('index', {
-        title: 'Koa2',
-        message: 'Hello Koa2',
-    })
-
+    await ctx.render('qrcode')
 })
 
+router.use('/qrcode', qrcode.routes(), qrcode.allowedMethods())
 router.use('/dashboard', dashboard.routes(), dashboard.allowedMethods())
 router.use('/api', api.routes(), api.allowedMethods())
 
