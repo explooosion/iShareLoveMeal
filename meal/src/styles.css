@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import './css/content.css';
+/* @import './css/button.css'; */
+
+/* end of import */
+
+* {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  /* overflow-x: hidden; */
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+
+.container-narrow>hr {
+  margin: 2rem 0;
+}

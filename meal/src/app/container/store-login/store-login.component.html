@@ -1,0 +1,11 @@
+<div class="row content">
+  <div class="col-lg-6">
+    <form>
+      <div class="form-group">
+        <label for="storeId">請輸入店家代號：</label>
+        <input type="text" name="storeId" id="storeId" class="form-control" placeholder="例如 1234" [(ngModel)]="storeId">
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="chkStore()">確定</button>
+    </form>
+  </div>
+</div>
