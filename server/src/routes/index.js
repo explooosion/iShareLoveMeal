@@ -6,8 +6,7 @@ import compose from 'koa-compose';
 import Router from 'koa-router';
 
 import api from './api';
-import about from './about';
-import article from './article';
+import dashboard from './dashboard';
 
 const router = new Router();
 
@@ -20,9 +19,8 @@ router.get('/', async(ctx, next) => {
 
 })
 
+router.use('/dashboard', dashboard.routes(), dashboard.allowedMethods())
 router.use('/api', api.routes(), api.allowedMethods())
-router.use('/about', about.routes(), about.allowedMethods())
-router.use('/article', article.routes(), article.allowedMethods())
 
 router.get('*', async(ctx, next) => {
     ctx.throw(404);
