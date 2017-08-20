@@ -9,6 +9,7 @@ import logger from 'koa-logger';
 import convert from 'koa-convert';
 import bodyParser from 'koa-bodyparser';
 import helmet from 'koa-helmet';
+import cors from 'kcors';
 
 // unit
 import middleware from './middleware';
@@ -20,6 +21,7 @@ app
     .use(logger())
     .use(bodyParser())
     .use(helmet())
+    .use(cors())
     .use(mount("/", convert(serve(__dirname + '/public/'))))
     .use(views(__dirname + '/view/', {
         // extension: 'ejs'

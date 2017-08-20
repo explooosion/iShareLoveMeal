@@ -13,6 +13,7 @@ class ChildControllers {
     async findById(ctx) {
         ctx.body = await Child.findById(ctx);
     }
+
 }
 
 export default new ChildControllers()
