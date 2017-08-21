@@ -1,7 +1,5 @@
 'use strict';
 
-//import fs from 'fs';
-//import path from 'path';
 import compose from 'koa-compose';
 import Router from 'koa-router';
 
@@ -12,7 +10,9 @@ import api from './api';
 const router = new Router();
 
 router.get('/', async(ctx, next) => {
-    await ctx.render('qrcode')
+    ctx.body = {
+        index: true
+    }
 })
 
 router.use('/qrcode', qrcode.routes(), qrcode.allowedMethods())

@@ -1,5 +1,5 @@
 import sql from 'mssql'
-import config from '../config'
+import config from '../config/db'
 
 class Child {
 
