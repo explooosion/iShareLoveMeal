@@ -6,6 +6,7 @@ import util from 'util';
 
 import ChildControllers from '../controllers/child';
 import StoreControllers from '../controllers/store';
+import ExchangeControllers from '../controllers/exchange';
 
 const verify = util.promisify(jwt.verify) // 解密 
 const secret = require('../config/secret.json')
@@ -61,5 +62,8 @@ router.post('/child/login', ChildControllers.login)
 
 // store
 router.post('/store/login', StoreControllers.login)
+
+// exchange
+router.post('/exchange/add', ExchangeControllers.add)
 
 export default router;

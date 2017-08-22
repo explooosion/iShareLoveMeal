@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
 import { ChildService } from '../../service/child/child.service';
+import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 @Component({
   selector: 'app-child-login',
@@ -47,10 +47,9 @@ export class ChildLoginComponent implements OnInit {
       .subscribe(
       result => {
         this.reslut = result[0][0];
-        console.log(this.reslut);
         if (this.reslut) {
-          this.router.navigate(["/childcheck"]
-          );
+          Cookie.set('childCookie', JSON.stringify(this.reslut));
+          this.router.navigate(["/childcheck"]);
         }
         else {
           alert('查無此店家代號，請重新嘗試！');

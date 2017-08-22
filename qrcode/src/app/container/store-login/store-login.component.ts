@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { StoreService } from '../../service/store/store.service';
+import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 @Component({
   selector: 'app-store-login',
@@ -41,6 +41,7 @@ export class StoreLoginComponent implements OnInit {
       result => {
         this.reslut = result[0][0];
         if (this.reslut) {
+          Cookie.set('storeCookie', JSON.stringify(this.reslut));
           this.router.navigate(["/childlogin"]
             , {
               queryParams: {
