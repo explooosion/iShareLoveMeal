@@ -28,11 +28,15 @@ export default function authorization() {
         } catch (err) {
             if (err.status === 401) {
                 ctx.body = {
-                    message: 'author - 驗證失敗'
+                    message: 'author - 驗證失敗',
+                    log: err
                 }
             } else {
                 err.status = 404
-                ctx.body = '404'
+                ctx.body = {
+                    message: 'author - 404',
+                    log: err
+                }
                 console.log('author 404：', err)
             }
         }

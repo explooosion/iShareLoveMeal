@@ -10,7 +10,6 @@ import { NavComponent } from './container/nav/nav.component';
 import { StoreLoginComponent } from './container/store-login/store-login.component';
 import { ChildLoginComponent } from './container/child-login/child-login.component';
 import { ChildCheckComponent } from './container/child-check/child-check.component';
-import { QrcodeComponent } from './container/qrcode/qrcode.component';
 import { ErrorComponent } from './container/error/error.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { ErrorComponent } from './container/error/error.component';
     ChildLoginComponent,
     ErrorComponent,
     ChildCheckComponent,
-    QrcodeComponent
   ],
   imports: [
     BrowserModule,

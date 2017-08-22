@@ -1,6 +1,6 @@
 const config = {
-    "user": "sa",
-    "password": "12345678",
+    "user": "ishare",
+    "password": "ishare@666",
     "server": "localhost",
     "database": "ishare"
 };

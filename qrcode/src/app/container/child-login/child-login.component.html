@@ -1,11 +1,15 @@
 <div class="row content">
   <div class="col-lg-6">
-    <form>
+    <form (ngSubmit)="childCheck()">
       <div class="form-group">
-        <label for="childPWD">請輸入學童密碼：</label>
-        <input type="text" name="childPWD" id="storeId" class="form-control" placeholder="例如 1234" [(ngModel)]="childPWD">
+        <label for="childId">學童帳號：</label>
+        <input type="text" name="childId" id="childId" class="form-control" [(ngModel)]="childId" readonly>
       </div>
-      <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="chkChild()">確定</button>
+      <div class="form-group">
+        <label for="childPwd">請輸入學童密碼：</label>
+        <input type="text" name="childPwd" id="childPwd" class="form-control" placeholder="例如 123456" [(ngModel)]="childPwd">
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">確定</button>
     </form>
   </div>
 </div>

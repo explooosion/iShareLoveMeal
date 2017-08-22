@@ -5,13 +5,13 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class ChildService {
+export class StoreService {
 
-  private api: string = '/api/child/login/';
+  private api: string = '/api/store/login';
 
   constructor(private http: Http) { }
- 
-  public childLogin(body: Object) {
+
+  public storeLogin(body: Object) {
 
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });

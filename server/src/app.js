@@ -33,7 +33,7 @@ app
         secret: secret.sign
     }).unless({
         // 不需要驗證的請求路徑
-        path: [/^\/api/, /^\/api\/login/, /^\//]
+        path: [/^\/api/, /^\/api\/login/, /^\/api\/child/]
     }))
     .use(routes())
 

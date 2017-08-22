@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 import util from 'util';
 
 import ChildControllers from '../controllers/child';
+import StoreControllers from '../controllers/store';
 
 const verify = util.promisify(jwt.verify) // 解密 
 const secret = require('../config/secret.json')
@@ -53,7 +54,12 @@ router.get('/res', async(ctx, next) => {
     }
 })
 
+// child
 router.get('/child', ChildControllers.find)
 router.get('/child/:id', ChildControllers.findById)
+router.post('/child/login', ChildControllers.login)
+
+// store
+router.post('/store/login', StoreControllers.login)
 
 export default router;
