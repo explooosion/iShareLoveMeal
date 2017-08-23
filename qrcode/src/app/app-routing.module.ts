@@ -7,11 +7,12 @@ import { ChildCheckComponent } from './container/child-check/child-check.compone
 import { ExchangeResultComponent } from './container/exchange-result/exchange-result.component';
 import { ErrorComponent } from './container/error/error.component';
 const routes: Routes = [
+  { path: '', component: ErrorComponent },
+  { path: 'qrcode', component: StoreLoginComponent }, // from back-end router
   { path: 'storelogin', component: StoreLoginComponent },
   { path: 'childlogin', component: ChildLoginComponent },
   { path: 'childcheck', component: ChildCheckComponent },
   { path: 'exchangeresult', component: ExchangeResultComponent },
-  { path: '', component: ErrorComponent },
   { path: '**', component: ErrorComponent },
 ];
 

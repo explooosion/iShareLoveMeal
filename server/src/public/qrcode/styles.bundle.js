@@ -79,7 +79,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/earlyaccess/no
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/content.css"), "");
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n/* @import './css/button.css'; */\n\n/* end of import */\n\n* {\n  font-family: 'Noto Sans TC', sans-serif;\n}\n\nbody {\n  padding-top: 1.5rem;\n  padding-bottom: 1.5rem;\n  /* overflow-x: hidden; */\n}\n\n@media (min-width: 48em) {\n  .container {\n    max-width: 46rem;\n  }\n}\n\n.container-narrow>hr {\n  margin: 2rem 0;\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n/* @import './css/button.css'; */\r\n\r\n/* end of import */\r\n\r\n* {\r\n  font-family: 'Noto Sans TC', sans-serif;\r\n}\r\n\r\nbody {\r\n  padding-top: 1.5rem;\r\n  padding-bottom: 1.5rem;\r\n  /* overflow-x: hidden; */\r\n}\r\n\r\n@media (min-width: 48em) {\r\n  .container {\r\n    max-width: 46rem;\r\n  }\r\n}\r\n\r\n.container-narrow>hr {\r\n  margin: 2rem 0;\r\n}\r\n", ""]);
 
 // exports
 
