@@ -52,7 +52,7 @@ export class ChildLoginComponent implements OnInit {
           this.router.navigate(["/childcheck"]);
         }
         else {
-          alert('查無此店家代號，請重新嘗試！');
+          alert('密碼錯誤，請重新嘗試！');
         }
       });
   }

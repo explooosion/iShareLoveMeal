@@ -1,11 +1,14 @@
 <div class="header clearfix">
   <nav>
     <ul class="nav nav-pills float-right">
-      <!-- <li class="nav-item">
-        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      </li> -->
       <li class="nav-item">
-        <a class="nav-link text-primary" routerLink="/storelogin">Hi, 鳳城燒臘店！</a>
+        <a class="nav-link text-primary" [routerLink]="['/childlogin']" [queryParams]="{childid:'jason123'}">QRCODE</a>
+      </li>
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link text-primary" routerLink="/qrcode">{{ welcomeMSG }}</a>
+      </li>
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link text-primary" routerLink="/storelogin" (click)="loginOut()">登出</a>
       </li>
     </ul>
   </nav>

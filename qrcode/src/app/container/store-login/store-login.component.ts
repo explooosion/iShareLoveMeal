@@ -22,6 +22,17 @@ export class StoreLoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.storeCheckCookie();
+  }
+
+  public storeCheckCookie() {
+    let res = JSON.parse(Cookie.get('storeCookie'));
+    if (res) {
+      this.storeId = res.account;
+      this.storePwd = res.password;
+      this.storeCheck();
+    }
+
   }
 
   public async storeCheck() {
@@ -45,7 +56,7 @@ export class StoreLoginComponent implements OnInit {
           this.router.navigate(["/childlogin"]
             , {
               queryParams: {
-                'childid': 'jason123'
+                'childid': Cookie.get('qrcodeCookie')
               }
             }
           );
