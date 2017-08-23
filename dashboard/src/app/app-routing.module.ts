@@ -9,7 +9,8 @@ import { ExchangeComponent } from './container/exchange/exchange.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'child', component: ChildComponent },
-  { path: 'exchange', component: ExchangeComponent }
+  { path: 'exchange', component: ExchangeComponent },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
