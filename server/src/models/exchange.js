@@ -3,6 +3,15 @@ import config from '../config/db'
 
 class Exchange {
 
+    async find(ctx) {
+        const pool = await sql.connect(config)
+        const result = await sql.query `select * from ExchangeList order by id desc`
+        console.dir(result)
+
+        await sql.close()
+        return result['recordsets']
+    }
+
     async add(ctx) {
         const pool = await sql.connect(config)
 

@@ -64,6 +64,7 @@ router.post('/child/login', ChildControllers.login)
 router.post('/store/login', StoreControllers.login)
 
 // exchange
+router.get('/exchange', ExchangeControllers.find)
 router.post('/exchange/add', ExchangeControllers.add)
 
 export default router;
