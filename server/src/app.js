@@ -37,7 +37,7 @@ app
     }))
     .use(routes())
 
-app.listen(3000,
+app.listen(80,
     () => console.log(`✅  The server is running at http://localhost:3000/`)
 )
 
