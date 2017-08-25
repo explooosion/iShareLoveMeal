@@ -21,15 +21,23 @@ export class NavComponent implements OnInit {
     this.checkLogin();
   }
 
+  /**
+   * 檢查是否已經登入
+   */
   public checkLogin() {
     let cookie = JSON.parse(Cookie.get('storeCookie'));
+    console.log(cookie);
     if (cookie) {
       this.isLogin = true;
       this.welcomeMSG = `Hi, ${cookie.name}!`;
     }
   }
 
+  /**
+   * 登出（依據流程規範，不給店家自行登出）
+   */
   public loginOut() {
+    alert('注意！本系統上線後不再提供登出功能！');
     Cookie.delete('storeCookie');
   }
 

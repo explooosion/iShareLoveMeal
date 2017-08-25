@@ -1,13 +1,13 @@
 <div class="row content">
   <div class="col-lg-6">
-    <form (ngSubmit)="storeCheck()">
+    <form (ngSubmit)="storeSubmit()">
       <div class="form-group">
         <label for="storeId">店家帳號：</label>
         <input type="text" name="storeId" id="storeId" class="form-control" placeholder="例如 1234" [(ngModel)]="storeId">
       </div>
       <div class="form-group">
         <label for="storePwd">請輸入店家密碼：</label>
-        <input type="text" name="storePwd" id="storePwd" class="form-control" placeholder="例如 1234" [(ngModel)]="storePwd">
+        <input type="password" name="storePwd" id="storePwd" class="form-control" placeholder="例如 1234" [(ngModel)]="storePwd">
       </div>
       <button type="submit" class="btn btn-primary btn-lg btn-block">確定</button>
     </form>

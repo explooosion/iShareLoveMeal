@@ -17,50 +17,64 @@ export class ChildCheckComponent implements OnInit {
   public storeId: String = '';
   public isDebug: Boolean = false;
 
-  public showExchange: Boolean = true;
-
   constructor(
     private router: Router,
     private exchangeService: ExchangeService
   ) { }
 
   ngOnInit() {
-    let childCookie = JSON.parse(Cookie.get('childCookie'));
-    this.childId = childCookie.account;
-    this.point = childCookie.point;
-
-    let storeCookie = JSON.parse(Cookie.get('storeCookie'));
-    this.storeId = storeCookie.account
-    console.log(childCookie)
-    console.log(storeCookie)
+    this.iniCookie();
   }
 
+  /**
+   * 載入 cookie
+   */
+  public iniCookie() {
+
+    let childCookie = JSON.parse(Cookie.get('childCookie'));
+    console.log('childCookie', childCookie);
+    if (childCookie) {
+      this.childId = childCookie.account;
+      this.point = childCookie.point;
+    } else {
+      this.router.navigate(["/error"]);
+    }
+
+    let storeCookie = JSON.parse(Cookie.get('storeCookie'));
+    console.log('storeCookie', storeCookie);
+    if (storeCookie) {
+      this.storeId = storeCookie.account;
+    } else {
+      this.router.navigate(["/error"]);
+    }
+
+  }
+
+  /**
+   * 提交表單資料
+   */
   public async chkCheck() {
     let body = {
       childId: this.childId,
       storeId: this.storeId,
       point: this.point,
       time: moment().format('YYYY-MM-DD HH:mm:ss'),
-      pointCost: 10
+      pointCost: 10 // 扣除點數要討論
     };
-
     await this.exchangeAdd(body);
   }
 
+  /**
+   * 進行兌換
+   * @param body 表單參數
+   */
   public async exchangeAdd(body: Object) {
-
-
-    if (!this.isDebug) {
-      await this.exchangeService.exchangeAdd(body).subscribe(
-        result => {
-          alert('兌換成功！');
-          this.showExchange = false;
-        }
-      );
-
-    } else {
-      alert('點數不足！');
-    }
+    await this.exchangeService.exchangeAdd(body).subscribe(
+      result => {
+        alert('兌換成功！');
+        Cookie.set('exchange', JSON.stringify(body));
+        this.router.navigate(["/exchangeresult"]);
+      });
   }
 
 

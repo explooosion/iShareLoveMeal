@@ -19,29 +19,37 @@ export class ChildLoginComponent implements OnInit {
   constructor(
     private router: Router,
     private childService: ChildService
-  ) {
+  ) { }
 
-  }
   ngOnInit() {
     this.childCheckUrl();
   }
 
+  /**
+   * 檢查網址參數是否正確
+   */
   public childCheckUrl() {
     this.childId = this.router['rawUrlTree']['queryParams']['childid'];
     if (!this.childId) {
-      this.router.navigate(["/storelogin"]);
+      this.router.navigate(["/error"]);
     }
   }
 
+  /**
+   * 提交表單資料
+   */
   public async childCheck() {
     let body = {
       childId: this.childId,
       childPwd: this.childPwd
     };
-
     await this.childLogin(body);
   }
 
+  /**
+   * 登入
+   * @param body 表單參數
+   */
   public async childLogin(body: Object) {
     return await this.childService.childLogin(body)
       .subscribe(

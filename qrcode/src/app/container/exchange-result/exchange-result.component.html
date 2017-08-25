@@ -1,21 +1,46 @@
+<div class="content text-center">
+  <h3 class="text-danger">兌換成功</h3>
+</div>
 <div class="row content">
-  <div class="col-6 text-center">
+  <div class="col-5 text-center">
     <label class="col-form-label">學童編號：</label>
   </div>
-  <div class="col-6 text-left">
+  <div class="col-7 text-left">
     <label class="col-form-label">{{ childId }}</label>
   </div>
 </div>
 <div class="row content">
-  <div class="col-6 text-center">
-    <label class="col-form-label">學童剩餘點數：</label>
+  <div class="col-5 text-center">
+    <label class="col-form-label">使用點數：</label>
   </div>
-  <div class="col-6 text-left">
-    <label class="col-form-label">{{ point }}</label>
+  <div class="col-7 text-left">
+    <label class="col-form-label">{{ pointCost }}</label>
   </div>
 </div>
 <div class="row content">
-  <div class="col-12 text-center">
-    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="close()">關閉</button>
+  <div class="col-5 text-center">
+    <label class="col-form-label">剩餘點數：</label>
   </div>
+  <div class="col-7 text-left">
+    <label class="col-form-label">{{ point - pointCost }}</label>
+  </div>
+</div>
+<div class="row content">
+  <div class="col-5 text-center">
+    <label class="col-form-label">用餐時間：</label>
+  </div>
+  <div class="col-7 text-left">
+    <label class="col-form-label">{{ time }}</label>
+  </div>
+</div>
+<div class="row content">
+  <div class="col-5 text-center">
+    <label class="col-form-label">兌換店家：</label>
+  </div>
+  <div class="col-7 text-left">
+    <label class="col-form-label">{{ storeId }}</label>
+  </div>
+</div>
+<div class="content text-center">
+  <img src="/assets/smile.png" alt="" height="150px">
 </div>

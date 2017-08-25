@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'childlogin', component: ChildLoginComponent },
   { path: 'childcheck', component: ChildCheckComponent },
   { path: 'exchangeresult', component: ExchangeResultComponent },
+  { path: 'error', component: ErrorComponent },
   { path: '**', component: ErrorComponent },
 ];
 
