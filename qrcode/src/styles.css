@@ -1,14 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/* @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); */
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosansscsliced.css);
 @import './css/content.css';
+
 /* @import './css/button.css'; */
+
 
 /* end of import */
 
 * {
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Noto Sans SC Sliced', sans-serif;
 }
 
 body {
