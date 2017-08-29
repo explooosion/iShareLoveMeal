@@ -4,15 +4,17 @@ import config from '../config/db'
 class Exchange {
 
     async find(ctx) {
+
         const pool = await sql.connect(config)
         const result = await sql.query `select * from ExchangeList order by id desc`
         console.dir(result)
-
-        await sql.close()
+        
+        await pool.close()
         return result['recordsets']
     }
 
     async add(ctx) {
+
         const pool = await sql.connect(config)
 
         // 剩餘點數 = 原有點數 - 使用點數
@@ -34,8 +36,8 @@ class Exchange {
             .query(`insert into ExchangeList ( childAccount, storeAccount, point, time ) 
                         values ( @childAccount, @storeAccount, @point, @time )`)
         console.dir(reLog)
-
-        await sql.close()
+  
+        await pool.close()
         return reLog['recordsets']
     }
 
