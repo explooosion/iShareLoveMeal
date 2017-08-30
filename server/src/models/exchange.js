@@ -9,7 +9,7 @@ class Exchange {
         const result = await sql.query `select * from ExchangeList order by id desc`
         console.dir(result)
         
-        await pool.close()
+        await sql.close()
         return result['recordsets']
     }
 
@@ -37,7 +37,7 @@ class Exchange {
                         values ( @childAccount, @storeAccount, @point, @time )`)
         console.dir(reLog)
   
-        await pool.close()
+        await sql.close()
         return reLog['recordsets']
     }
 

@@ -8,7 +8,7 @@ class Child {
         const result = await sql.query `select * from ChildList`
         console.dir(result)
 
-        await pool.close()
+        await sql.close()
         return result['recordsets']
     }
 
@@ -20,7 +20,7 @@ class Child {
             .query('select * from ChildList where account = @account')
         console.dir(result)
 
-        await pool.close()
+        await sql.close()
         return result['recordsets']
     }
 
@@ -33,7 +33,7 @@ class Child {
             .query('select * from ChildList where account = @account and password = @password')
         console.dir(result)
 
-        await pool.close()
+        await sql.close()
         return result['recordsets']
     }
 }
