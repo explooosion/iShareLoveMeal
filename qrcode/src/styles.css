@@ -6,14 +6,14 @@
 
 @import url(https://fonts.googleapis.com/earlyaccess/notosansscsliced.css);
 @import './css/content.css';
-
-/* @import './css/button.css'; */
+@import './css/button.css';
 
 
 /* end of import */
 
 * {
   font-family: 'Noto Sans SC Sliced', sans-serif;
+  font-size: 1.5rem;
 }
 
 body {

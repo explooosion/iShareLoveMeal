@@ -37,8 +37,8 @@ app
     }))
     .use(routes())
 
-app.listen(80,
-    () => console.log(`✅  The server is running at http://localhost:80/`)
+app.listen(3000,
+    () => console.log(`✅  The server is running at http://localhost:3000/`)
 )
 
 export default app
