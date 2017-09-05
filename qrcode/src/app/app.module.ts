@@ -34,7 +34,7 @@ import { ErrorComponent } from './container/error/error.component';
     FormsModule,
     HttpModule,
     JsonpModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

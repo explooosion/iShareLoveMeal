@@ -1,46 +1,24 @@
-<div class="content text-center">
-  <h2 class="text-danger">兌換成功</h2>
-</div>
-<div class="row content">
-  <div class="col-5 text-center">
-    <label class="col-form-label">學童編號：</label>
+<div id="exchange-result" class="row content">
+  <div class="col-12">
+    <form (ngSubmit)="chkCheck()">
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label col-label text-right">使用點數：</label>
+        <label class="col-sm-6 col-form-label col-label text-left">{{ pointCost }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label col-label text-right">剩餘點數：</label>
+        <label class="col-sm-6 col-form-label col-label text-left">{{ point - pointCost }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label col-label text-right">店家編號：</label>
+        <label class="col-sm-6 col-form-label col-label text-left">{{ storeId }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label col-label text-right">時間：</label>
+        <label class="col-sm-6 col-form-label col-label text-left">{{ time }}</label>
+      </div>
+      <div class="form-group text-center">
+        <img src="/assets/smile.png" alt="" height="200px"></div>
+    </form>
   </div>
-  <div class="col-7 text-left">
-    <label class="col-form-label">{{ childId }}</label>
-  </div>
-</div>
-<div class="row content">
-  <div class="col-5 text-center">
-    <label class="col-form-label">使用點數：</label>
-  </div>
-  <div class="col-7 text-left">
-    <label class="col-form-label">{{ pointCost }}</label>
-  </div>
-</div>
-<div class="row content">
-  <div class="col-5 text-center">
-    <label class="col-form-label">剩餘點數：</label>
-  </div>
-  <div class="col-7 text-left">
-    <label class="col-form-label">{{ point - pointCost }}</label>
-  </div>
-</div>
-<div class="row content">
-  <div class="col-5 text-center">
-    <label class="col-form-label">用餐時間：</label>
-  </div>
-  <div class="col-7 text-left">
-    <label class="col-form-label">{{ time }}</label>
-  </div>
-</div>
-<div class="row content">
-  <div class="col-5 text-center">
-    <label class="col-form-label">兌換店家：</label>
-  </div>
-  <div class="col-7 text-left">
-    <label class="col-form-label">{{ storeId }}</label>
-  </div>
-</div>
-<div class="content text-center">
-  <img src="/assets/smile.png" alt="" height="150px">
 </div>

@@ -3,6 +3,8 @@ import { ExchangeService } from '../../service/exchange/exchange.service';
 import { Router } from '@angular/router';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 import * as moment from 'moment';
+import * as swal from 'sweetalert';
+
 
 @Component({
   selector: 'app-child-check',
@@ -13,8 +15,10 @@ import * as moment from 'moment';
 export class ChildCheckComponent implements OnInit {
 
   public childId: String = '';
+  public childName: String = '';
   public point: Number = 0;
   public storeId: String = '';
+  public storeName: String = '';
   public isDebug: Boolean = false;
 
   constructor(
@@ -26,6 +30,7 @@ export class ChildCheckComponent implements OnInit {
     this.iniCookie();
   }
 
+
   /**
    * 載入 cookie
    */
@@ -35,6 +40,7 @@ export class ChildCheckComponent implements OnInit {
     console.log('childCookie', childCookie);
     if (childCookie) {
       this.childId = childCookie.account;
+      this.childName = childCookie.name;
       this.point = childCookie.point;
     } else {
       this.router.navigate(["/error"]);
@@ -44,6 +50,7 @@ export class ChildCheckComponent implements OnInit {
     console.log('storeCookie', storeCookie);
     if (storeCookie) {
       this.storeId = storeCookie.account;
+      this.storeName = storeCookie.name;
     } else {
       this.router.navigate(["/error"]);
     }
@@ -69,9 +76,12 @@ export class ChildCheckComponent implements OnInit {
    * @param body 表單參數
    */
   public async exchangeAdd(body: Object) {
+
     await this.exchangeService.exchangeAdd(body).subscribe(
       result => {
-        alert('兌換成功！');
+
+        swal(`兌換成功囉！`, `謝謝「${this.storeName}」！\n\n請用餐完畢後\n別忘了清理桌面唷！`, "success");
+
         Cookie.set('exchange', JSON.stringify(body));
         this.router.navigate(["/exchangeresult"]);
       });

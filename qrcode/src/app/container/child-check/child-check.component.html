@@ -1,29 +1,25 @@
-<div class="row content">
-  <div class="col-6 text-center">
-    <label class="col-form-label">學童編號：</label>
-  </div>
-  <div class="col-6 text-left">
-    <label class="col-form-label">{{ childId }}</label>
-  </div>
-</div>
-<div class="row content">
-  <div class="col-6 text-center">
-    <label class="col-form-label">學童點數：</label>
-  </div>
-  <div class="col-6 text-left">
-    <label class="col-form-label">{{ point }}</label>
-  </div>
-</div>
-<div class="row content">
-  <div class="col-6 text-center">
-    <label class="col-form-label">用餐點數：</label>
-  </div>
-  <div class="col-6 text-left">
-    <label class="col-form-label">10</label>
-  </div>
-</div>
-<div class="row content">
-  <div class="col-12 text-center">
-    <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="chkCheck()">確定</button>
+<div id="child-check" class="row content">
+  <div class="col-12">
+    <form (ngSubmit)="chkCheck()">
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label col-label text-right">我的編號：</label>
+        <label class="col-sm-6 col-form-label col-label text-left">{{ childId }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label col-label text-right">我的名字：</label>
+        <label class="col-sm-6 col-form-label col-label text-left">{{ childName }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label col-label text-right">我的點數：</label>
+        <label class="col-sm-6 col-form-label col-label text-left">{{ point }}</label>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-6 col-form-label col-label text-right">扣掉點數：</label>
+        <label class="col-sm-6 col-form-label col-label text-left">0010</label>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="chkCheck()">確　　定</button>
+      </div>
+    </form>
   </div>
 </div>

@@ -1,7 +1,7 @@
 .header {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
   border-bottom: .05rem solid #e5e5e5;
 }
 
@@ -9,6 +9,7 @@
   margin-top: 0;
   margin-bottom: 0;
   line-height: 3rem;
+  padding: 5px 0;
 }
 
 
@@ -16,8 +17,7 @@
 
 @media screen and (min-width: 48em) {
   .header {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 1rem 2rem;
   }
   .header {
     margin-bottom: 2rem;

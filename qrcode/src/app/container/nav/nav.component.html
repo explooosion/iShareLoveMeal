@@ -5,7 +5,7 @@
         <a class="nav-link text-danger" [routerLink]="['/qrcode']" [queryParams]="{childid:'jason123'}">DEBUG</a>
       </li>
       <li *ngIf="isLogin" class="nav-item">
-        <a class="nav-link text-primary">{{ welcomeMSG }}</a>
+        <!-- <a class="nav-link text-primary">{{ welcomeMSG }}</a> -->
       </li>
       <li *ngIf="false" class="nav-item">
         <a class="nav-link text-primary" routerLink="/storelogin" (click)="loginOut()">登出</a>
