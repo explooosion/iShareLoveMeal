@@ -8,10 +8,10 @@
 
 button,
 input {
-  height: 7rem;
-  font-size: 4rem !important;
+  height: 4rem;
+  font-size: 2rem !important;
 }
 
 .form-control {
-  font-size: 3rem !important;
+  font-size: 2rem !important;
 }

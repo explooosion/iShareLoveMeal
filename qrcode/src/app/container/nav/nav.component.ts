@@ -41,4 +41,13 @@ export class NavComponent implements OnInit {
     Cookie.delete('storeCookie');
   }
 
+  /**
+   * 清除店家紀錄
+   *
+   * @memberof NavComponent
+   */
+  public clearAll() {
+    Cookie.delete('storeCookie');
+  }
+
 }
