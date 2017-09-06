@@ -13,6 +13,7 @@ export class ChildLoginComponent implements OnInit {
 
   public childId: String = '';
   public childPwd: String = '';
+  public storeName: String = '';
 
   public reslut: any = null;
 
@@ -22,15 +23,24 @@ export class ChildLoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.childCheckUrl();
+    this.checkUrl();
   }
 
   /**
    * 檢查網址參數是否正確
    */
-  public childCheckUrl() {
+  public checkUrl() {
+
     this.childId = this.router['rawUrlTree']['queryParams']['childid'];
     if (!this.childId) {
+      this.router.navigate(["/error"]);
+    }
+
+    let storeCookie = JSON.parse(Cookie.get('storeCookie'));
+    console.log('storeCookie', storeCookie);
+    if (storeCookie) {
+      this.storeName = storeCookie.name;
+    } else {
       this.router.navigate(["/error"]);
     }
   }
