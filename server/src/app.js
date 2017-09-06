@@ -29,12 +29,12 @@ app
     .use(views(__dirname + '/view/', {
         extension: 'html'
     }))
-    .use(jwtKoa({
-        secret: secret.sign
-    }).unless({
-        // 不需要驗證的請求路徑
-        path: [/^\/api/, /^\/api\/login/, /^\/api\/exchange/, /^\/api\/child/, /^\/dashboard/, /^\/qrcode/]
-    }))
+    // .use(jwtKoa({
+    //     secret: secret.sign
+    // }).unless({
+    //     // 不需要驗證的請求路徑
+    //     path: [/^\/api/, /^\/api\/login/, /^\/api\/exchange/, /^\/api\/child/, /^\/dashboard/, /^\/qrcode/]
+    // }))
     .use(routes())
 
 app.listen(80,

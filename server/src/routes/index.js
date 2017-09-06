@@ -10,9 +10,7 @@ import api from './api';
 const router = new Router();
 
 router.get('/', async(ctx, next) => {
-    ctx.body = {
-        index: true
-    }
+    await ctx.render('size')
 })
 
 router.use('/qrcode', qrcode.routes(), qrcode.allowedMethods())
